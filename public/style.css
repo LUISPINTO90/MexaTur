@@ -93,3 +93,11 @@ input[class="btnLogin"] {
   margin-bottom: 1.5rem;
   margin-top: 2rem;
 }
+
+.swal2-styled.swal2-confirm.swalBtnColor {
+  color: #fff;
+  background-color: #df0070;
+  font-family: "Montserrat", sans-serif;
+}
+
+
