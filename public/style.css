@@ -100,4 +100,6 @@ input[class="btnLogin"] {
   font-family: "Montserrat", sans-serif;
 }
 
-
+.swal2-title.swalTitle {
+  font-weight: 900;
+}
