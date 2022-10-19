@@ -48,12 +48,6 @@ input {
   width: 90%;
 }
 
-input:focus {
-  outline: none !important;
-  border: 1px solid #bb025f;
-  box-shadow: 0 0 10px #df0070;
-}
-
 input[type="button"] {
   color: #fdfdfc;
   font-size: 1.2rem;
@@ -67,6 +61,14 @@ input[class="btnLogin"] {
   background-color: #fff;
   color: #15162f;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+  margin-bottom: 1rem;
+}
+
+input[class="btnSearch"] {
+  background-color: #fff;
+  color: #15162f;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
 }
 
 .headerProfile {
@@ -120,4 +122,8 @@ input[class="btnLogin"] {
 
 .swal2-title.swalTitle {
   font-weight: 900;
+}
+
+.swal2-validation-message.validationColor {
+  font-weight: 600;
 }

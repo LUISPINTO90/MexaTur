@@ -7,7 +7,7 @@
     <title>MexaTur</title>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="./public/style.css" />
+    <link rel="stylesheet" href="../public/style.css" />
 
     <!-- Google Font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,21 +25,43 @@
     <section>
       <header class="headerProfile">
         <article>
-          <img id="back" class="miniImg" src="./img/back.png" />
+          <article>
+            <img id="back" class="miniImg" src="../img/back.png" />
+          </article>
+          <article>
+            <img class="secondaryLogoImg" src="../img/secondaryLogo.png" />
+          </article>
         </article>
         <article>
-          <img class="secondaryLogoImg" src="./img/secondaryLogo.png" />
-        </article>
-        <article>
-          <img class="userImg" src="./img/user.png" />
-          <article id="userNameProfile"></article>
+          <img class="userImg" src="../img/user.png" />
+          <article id="userNameProfile" class="subtitle"></article>
         </article>
       </header>
     </section>
 
+    <section>
+      <main>
+        <article>
+          <input type="button" id="btnSearch" value="B&uacute;squeda" />
+        </article>
+        <br />
+        <article>
+          <input
+            type="button"
+            id="btnDestinations"
+            value="Destinos Guardados"
+          />
+        </article>
+      </main>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../public/Destinations.js"></script>
+    <script src="../public/Search.js"></script>
+
     <script>
       document.getElementById("back").addEventListener("click", () => {
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
       });
     </script>
 
