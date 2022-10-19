@@ -22,7 +22,30 @@
   </head>
 
   <body>
-    <!-- Scripts -->
-    <script src="./public/main.js"></script>
+    <section>
+      <header class="headerProfile">
+        <article>
+          <img id="back" class="miniImg" src="./img/back.png" />
+        </article>
+        <article>
+          <img class="secondaryLogoImg" src="./img/secondaryLogo.png" />
+        </article>
+        <article>
+          <img class="userImg" src="./img/user.png" />
+          <article id="userNameProfile"></article>
+        </article>
+      </header>
+    </section>
+
+    <script>
+      document.getElementById("back").addEventListener("click", () => {
+        window.location.href = "./index.html";
+      });
+    </script>
+
+    <script>
+      document.getElementById("userNameProfile").innerHTML =
+        localStorage.usuario;
+    </script>
   </body>
 </html>
