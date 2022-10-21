@@ -10,11 +10,11 @@ document.getElementById("btnRegister").addEventListener("click", () => {
     background: "#fff",
     html: `
       <form>
-        <input autocomplete="off" style="margin:auto; margin-top: 1em; text-transform:lowercase;"
+        <input autocomplete="off" style="margin:auto; margin-top: 1em;"
          type="text" id="userName" class="swal2-input" placeholder="Nombre">
-        <input autocomplete="off" style="margin:auto; margin-top: 1em; text-transform:lowercase;"
+        <input autocomplete="off" style="margin:auto; margin-top: 1em;"
          type="text" id="userEmail" class="swal2-input" placeholder="Correo">
-        <input autocomplete="off" style="margin:auto; margin-top: 1em; margin-bottom: 2em; text-transform:lowercase;"
+        <input autocomplete="off" style="margin:auto; margin-top: 1em; margin-bottom: 2em;"
          type="text" id="userPassword" class="swal2-input" placeholder="Contraseña">
       </form>
     `,
@@ -74,9 +74,9 @@ document.getElementById("btnLogin").addEventListener("click", () => {
     background: "#fff",
     html: `
       <form>
-        <input autocomplete="off" style="margin:auto; margin-top: 1em; text-transform:lowercase;"
+        <input autocomplete="off" style="margin:auto; margin-top: 1em;"
          type="text" id="userEmailLogin" class="swal2-input" placeholder="Correo">
-        <input autocomplete="off" style="margin:auto; margin-top: 1em; margin-bottom: 2em; text-transform:lowercase;"
+        <input autocomplete="off" style="margin:auto; margin-top: 1em; margin-bottom: 2em;"
          type="text" id="userPasswordLogin" class="swal2-input" placeholder="Contraseña">
       </form>
     `,

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MexaTur</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../public/style.css" />
+
+    <!-- Google Font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SweetAlert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <section>
+      <header class="headerProfile">
+        <article>
+          <article>
+            <img id="back" class="miniImg" src="../img/back.png" />
+            <article class="title">B&uacute;squeda</article>
+          </article>
+        </article>
+      </header>
+    </section>
+
+    <section>
+      <main>
+        <section class="wrapper">
+          <article>
+            <article>
+              <input
+                spellcheck="false"
+                autocomplete="off"
+                id="search-input"
+                class="swal2-input searchDestination"
+                type="text"
+                placeholder="Buscar destino aqu&iacute;."
+              />
+            </article>
+            <article>
+              <input
+                class="swal2-confirm swalBtnColor swal2-styled search"
+                type="button"
+                id="search"
+                value="Buscar"
+              />
+            </article>
+          </article>
+
+          <article>
+            <section id="buttons">
+              <button
+                class="button-value buttonsFilter"
+                onclick="filterProduct('all')"
+              >
+                Todos
+              </button>
+
+              <button
+                class="button-value buttonsFilter"
+                onclick="filterProduct('Colima')"
+              >
+                Colima
+              </button>
+
+              <button
+                class="button-value buttonsFilter"
+                onclick="filterProduct('Jalisco')"
+              >
+                Jalisco
+              </button>
+
+              <button
+                class="button-value buttonsFilter"
+                onclick="filterProduct('Oaxaca')"
+              >
+                Oaxaca
+              </button>
+
+              <button
+                class="button-value buttonsFilter"
+                onclick="filterProduct('Chiapas')"
+              >
+                Chiapas
+              </button>
+            </section>
+            <section id="products"></section>
+          </article>
+        </section>
+      </main>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../public/Destinations.js"></script>
+
+    <script>
+      document.getElementById("back").addEventListener("click", () => {
+        window.location.href = "./profile.html";
+      });
+    </script>
+  </body>
+</html>

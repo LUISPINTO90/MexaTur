@@ -26,15 +26,25 @@
       <header class="headerProfile">
         <article>
           <article>
-            <img id="back" class="miniImg" src="../img/back.png" />
+            <img id="back" class="miniImg" src="../img/backRed.png" />
           </article>
           <article>
             <img class="secondaryLogoImg" src="../img/secondaryLogo.png" />
           </article>
         </article>
+
         <article>
           <img class="userImg" src="../img/user.png" />
           <article id="userNameProfile" class="subtitle"></article>
+          <article>
+            <input
+              class="swal2-confirm swalBtnColor swal2-styled"
+              type="button"
+              id="btnSearch"
+              value="Buscar Destinos"
+            />
+          </article>
+          <br />
         </article>
       </header>
     </section>
@@ -42,32 +52,28 @@
     <section>
       <main>
         <article>
-          <input type="button" id="btnSearch" value="B&uacute;squeda" />
+          <article class="title">Destinos Guardados</article>
         </article>
-        <br />
-        <article>
-          <input
-            type="button"
-            id="btnDestinations"
-            value="Destinos Guardados"
-          />
-        </article>
+        <div id="savedDestinations" class="resultSave"></div>
       </main>
     </section>
 
     <!-- Scripts -->
-    <script src="../public/Destinations.js"></script>
-    <script src="../public/Search.js"></script>
 
     <script>
       document.getElementById("back").addEventListener("click", () => {
         window.location.href = "../index.html";
       });
+
+      document.getElementById("btnSearch").addEventListener("click", () => {
+        window.location.href = "./search.html";
+      });
     </script>
 
     <script>
-      document.getElementById("userNameProfile").innerHTML =
-        localStorage.usuario;
+      document.getElementById("userNameProfile").innerHTML = `
+      Correo: ${localStorage.usuario} <br />
+      `;
     </script>
   </body>
 </html>

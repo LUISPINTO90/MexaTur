@@ -1,162 +1,332 @@
-class Destination{        
-    constructor(name,location){
-        this.name=name;
-        this.location=location;
-        this.description="";
-    }
+let products = {
+  data: [
+    {
+      //1
+      productName: "Comala",
+      category: "Colima",
+      price: "Ubicado en el estado de Colima",
+      image: "/img/destinations/comala.png",
+    },
+    {
+      //2
+      productName: "Manzanillo",
+      category: "Colima",
+      price: "Ubicado en el estado de Colima",
+      image: "/img/destinations/manzanillo.png",
+    },
+    {
+      //3
+      productName: "Tequila",
+      category: "Jalisco",
+      price: "Ubicado en el estado de Jalisco",
+      image: "/img/destinations/tequila.png",
+    },
+    {
+      //4
+      productName: "Puerto Vallarta",
+      category: "Jalisco",
+      price: "Ubicado en el estado de Jalisco",
+      image: "/img/destinations/puertoVallarta.png",
+    },
+    {
+      //5
+      productName: "Guadalajara (Centro)",
+      category: "Jalisco",
+      price: "Ubicado en el estado de Jalisco",
+      image: "/img/destinations/guadalajaraCentro.png",
+    },
+    {
+      //6
+      productName: "Careyes",
+      category: "Jalisco",
+      price: "Ubicado en el estado de Jalisco",
+      image: "/img/destinations/careyes.png",
+    },
+    {
+      //7
+      productName: "Monte Alban",
+      category: "Oaxaca",
+      price: "Ubicado en el estado de Oaxaca",
+      image: "/img/destinations/monteAlban.png",
+    },
+    {
+      //8
+      productName: "Hierve el Agua",
+      category: "Oaxaca",
+      price: "Ubicado en el estado de Oaxaca",
+      image: "/img/destinations/hierveElAgua.png",
+    },
+    {
+      //9
+      productName: "Mitla",
+      category: "Oaxaca",
+      price: "Ubicado en el estado de Oaxaca",
+      image: "/img/destinations/mitla.png",
+    },
+    {
+      //10
+      productName: "Huatulco",
+      category: "Oaxaca",
+      price: "Ubicado en el estado de Oaxaca",
+      image: "/img/destinations/huatulco.png",
+    },
+    {
+      //11
+      productName: "Oaxaca (Centro)",
+      category: "Oaxaca",
+      price: "Ubicado en el estado de Oaxaca",
+      image: "/img/destinations/oaxacaCentro.png",
+    },
+    {
+      //12
+      productName: "Cascadas de Agua Azul",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/cascadasAguaAzul.png",
+    },
+    {
+      //13
+      productName: "Parque Nacional Cañon del Sumidero",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/canonDelSumidero.png",
+    },
+    {
+      //14
+      productName: "Parque Ecoturistico el Arcotete",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/elArcotete.png",
+    },
+    {
+      //15
+      productName: "Parque Nacional Lagunas de Montebello",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/lagunasDeMontebello.png",
+    },
+    {
+      //16
+      productName: "Centro Ecoturistico Cascadas el Chiflon",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/cascadasElChiflon.png",
+    },
+    {
+      //17
+      productName: "Parque Natural Montes Azules",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/montesAzules.png",
+    },
+    {
+      //18
+      productName: "San Cristobal de las Casas",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/sanCristobalDeLasCasas.png",
+    },
+    {
+      //19
+      productName: "Comitan de Dominguez",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/comitan.png",
+    },
+    {
+      //20
+      productName: "Chiapa de Corzo",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/chiapaDeCorzo.png",
+    },
+    {
+      //21
+      productName: "Zona Arqueologica de Palenque",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/palenque.png",
+    },
+    {
+      //22
+      productName: "Zona Arqueologica de Yaxchilan",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/yaxchilan.png",
+    },
+    {
+      //23
+      productName: "Bonampak",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/bonampak.png",
+    },
+    {
+      //24
+      productName: "Zona Arqueologica de Tenam Puente",
+      category: "Chiapas",
+      price: "Ubicado en el estado de Chiapas",
+      image: "/img/destinations/tenamPuente.png",
+    },
+  ],
+};
 
-    AddDescription(description){
-        this.description=description;
-    }
+let counter = 0;
+
+for (let i of products.data) {
+  counter++;
+  //Create Card
+  let card = document.createElement(`div`);
+  card.setAttribute("id", `${counter}`);
+  //Card should have category and should stay hidden initially
+  card.classList.add("card", i.category, "hide");
+  //image div
+  let imgContainer = document.createElement("div");
+  imgContainer.classList.add("image-container");
+  //img tag
+  let image = document.createElement("img");
+  image.setAttribute("src", i.image);
+  imgContainer.appendChild(image);
+  card.appendChild(imgContainer);
+  //container
+  let container = document.createElement("div");
+  container.classList.add("container");
+  //product name
+  let name = document.createElement("h4");
+  name.classList.add("product-name");
+  name.innerText = i.productName.toUpperCase();
+  container.appendChild(name);
+  //price
+  let price = document.createElement("p");
+  price.innerHTML = `<br />${i.price}`;
+  container.appendChild(price);
+  card.appendChild(container);
+  document.getElementById("products").appendChild(card);
 }
+//parameter passed from button (Parameter same as category)
+function filterProduct(value) {
+  //Button class code
+  let buttons = document.querySelectorAll(".button-value");
+  buttons.forEach((button) => {
+    //check if value equals innerText
+    if (value.toUpperCase() == button.innerText.toUpperCase()) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+  //select all cards
+  let elements = document.querySelectorAll(".card");
+  //loop through all cards
+  elements.forEach((element) => {
+    //display all cards on 'all' button click
+    if (value == "all") {
+      element.classList.remove("hide");
+    } else {
+      //Check if element contains category class
+      if (element.classList.contains(value)) {
+        //display element based on category
+        element.classList.remove("hide");
+      } else {
+        //hide other elements
+        element.classList.add("hide");
+      }
+    }
+  });
+}
+//Search button click
+document.getElementById("search").addEventListener("click", () => {
+  //initializations
+  let searchInput = document.getElementById("search-input").value;
+  let elements = document.querySelectorAll(".product-name");
+  let cards = document.querySelectorAll(".card");
+  //loop through all elements
+  elements.forEach((element, index) => {
+    //check if text includes the search value
+    if (element.innerText.includes(searchInput.toUpperCase())) {
+      //display matching card
+      cards[index].classList.remove("hide");
+    } else {
+      //hide others
+      cards[index].classList.add("hide");
+    }
+  });
+});
+//Initially display all products
+window.onload = () => {
+  filterProduct("all");
+};
 
-let Huasteca = new Destination("Huasteca Potosina en San Luis Potosí","San Luis Potosí");
-Huasteca.AddDescription("La Huasteca Potosina es un amplio espacio del estado de San Luis Potosí, que reúne un conjunto de municipios y atracciones, como si estuvieras en un pequeño país, presto a disfrutar de todos los encantos posibles. Su epicentro es Ciudad Valles, donde está la mayor capacidad hotelera. Cerca está Micos, con sus hermosas cascadas escalonadas. En Aquismón te espera el Sótano de las Golondrinas, un abismo de vértigo de más de 500 metros de profundidad, repleto de aves. En el municipio de Xilitla la gran atracción es el Jardín Surrealista de Sir Edward James.");
-
-let Bacalar = new Destination("Bacalar","Quitana Roo");
-Bacalar.AddDescription("La también llamada Laguna de los Siete Colores es impactante por su belleza, sus rápidos, sus estromatolitos y muy especialmente por sus embrujadores cenotes.La laguna es también sitio de moda para la motonáutica y otros divertimientos acuáticos. Fuera del agua, la localidad de Bacalar cuenta con otros sitios de interés turístico, como el Fuerte de San Felipe Neri y el Museo de la Guerra de Castas.");
-
-let CascadasHierve = new Destination("Cascadas de Hierve el Agua","Oaxaca");
-CascadasHierve.AddDescription("Pueda que de entrada el nombre te ponga a pensar en unos saltos de agua humeante, pero esta maravilla natural del estado de Oaxaca es un grupo de cascadas petrificadas.Las cataratas pétreas se formaron a lo largo de los milenios, mediante el goteo del agua saturada de carbonatos, de la misma manera que se erigen las estalactitas y estalagmitas en las cavernas. El fascinante lugar está la población oaxaqueña de San Isidro Roaguía y es también una plaza arqueológica de interés, por un sistema zapoteca de irrigación y terrazas.");
-
-let Xilitla = new Destination("Pozas de Xilitla","San Luis Potosí");
-Xilitla.AddDescription("Conjugando espléndidamente la obra del hombre con la de la naturaleza, en el municipio potosino de Xilitla se encuentra un espectacular conjunto artístico, realizado por el acaudalado escultor escocés del siglo XX, Edward Jones.El conglomerado arquitectónico y escultórico se encuentra en un hermoso predio de más de 300 mil metros cuadrados y las piezas artísticas están admirablemente integradas a cascadas, pozas, jardines y otros componentes del entorno natural. Entre estas destacan La escalera al cielo, La recámara con techo en forma de ballena y  LaCasa de los Peristilos, por nombrar solo tres.");
-
-let IslasMarietas = new Destination("Islas Marietas","Nayarit");
-IslasMarietas.AddDescription("Son dos islas nayaritas deshabitadas, llamadas Isla Redonda e Isla Larga. Son frecuentadas por sus hermosas playas, ideales para el buceo, el snorkel y la observación de la vida submarina.También son visitadas por los observadores de aves, particularmente para ver a una no muy común, el alcatraz patas azules.");
-
-let PlayaDelCarmen = new Destination("Playa del Carmen","Quintana Roo");
-PlayaDelCarmen.AddDescription("La Riviera Maya, en el Caribe mexicano, es uno de los principales corredores mundiales del turismo de playa y su corazón es Playa del Carmen.La ciudad del estado de Quintana Roo, frente a la isla de Cozumel, cuenta con una infraestructura hotelera de primer orden y en permanente expansión, playas paradisíacas, parques ecológicos y excelentes restaurantes en los que disfrutar los frescos pescados y mariscos caribeños y la gastronomía internacional.");
-
-let AguaAzul = new Destination("Cascadas Agua Azul","Chiapas");
-AguaAzul.AddDescription("Los ríos Otulún, Shumuljá y Tulijá, en el municipio chiapaneco de Tumbalá, forman acantilados verticales en sus cañones, por los que se desprenden unas bellas cataratas blaquiazules, las cascadas Agua Azul.La bonita tonalidad azulada proviene de los carbonatos que se van disolviendo en el agua a lo largo de su curso. El marco paradisíaco del lugar lo complementa el intrincado follaje circundante. El acceso al sitio se encuentra en la carretera que une a San Cristóbal de las Casas con Palenque.");
-
-let MariposasMonarcas  = new Destination("Santuario de la Mariposa Monarca","Michoacán");
-MariposasMonarcas.AddDescription("La mariposa Monarca, la bella especie de característicos colores naranja y negro, ha sobrevivido en América del Norte gracias a un largo viaje de reposo que tiene a México como punto de llegada.Es el insecto que realiza el movimiento migratorio más largo, viajando 4.000 kilómetros para escapar del crudo invierno canadiense.En Michoacán tiene dos grandes santuarios, la montaña de El Rosario y Sierra Chincua. Los observadores de la vida silvestre se las arreglan para ver a estos curiosos insectos que se hospedan en México entre noviembre y marzo.");
-
-let PalenqueChiapas  = new Destination("Palenque en Chiapas","Chiapas");
-PalenqueChiapas.AddDescription("Es una ciudad de origen maya en el estado de Chiapas, cuyos principales atractivos son sus yacimientos arqueológicos y sus hermosas cascadas. Buena parte de la zona arqueológica está aún por desenterrar, permaneciendo sepultada en la selva, pero lo que se ha develado es impresionante.Las principales edificaciones puestas al descubierto son El Observatorio, el Templo del Sol, el Templo de las Inscripciones, el Templo del Conde, el Templo de La Calavera, el Templo de La Cruz y El Palacio. En varios de ellos hay magníficos bajo relieves y otros elementos decorativos. Palenque es también famoso por sus caídas de agua, entre las que se encuentran Misol-Ha, Agua Azul y Agua Clara.");
-
-let CatedralDeGuadalupe = new Destination("Zócalo y Catedral de Nuestra Señora de Guadalupe","Ciudad de México");
-CatedralDeGuadalupe.AddDescription("La Plaza de la Constitución, nombre oficial del famoso zócalo de Ciudad de México, es el centro neurálgico del país. Es el lugar de todas las celebraciones magnas y está rodeado de las edificaciones más emblemáticas de la nación.La más importante para los mexicanos es la Catedral de Nuestra Señora de Guadalupe, el templo más grande de América.Su construcción fue iniciada en el siglo XVI y se estuvo hundiendo lenta pero progresivamente. Afortunadamente, tras complejos trabajos de estabilización, este Patrimonio de la Humanidad quedó libre de riesgos.");
-
-let BellasArtes = new Destination("Palacio de Bellas Artes","Ciudad de México");
-BellasArtes.AddDescription("La majestuosa edificación en estilos modernista y art decó es el símbolo de la alta cultura, no solo de Ciudad de  México, sino de todo el país. Fue inaugurado en 1918, como máxima joya en la conmemoración del primer centenario de la Independencia. Cuenta con un museo y en su principal sala de espectáculos se presentan funciones de ballet, teatro y música. Sus paredes están decoradas con murales de Rufino Tamayo, José Clemente Orozco, David Alfaro Siqueiros, Diego Rivera y otros grandes pintores mexicanos.");
-
-let PlazaTresCulturas = new Destination("Plaza de las Tres Culturas","Ciudad de México");
-PlazaTresCulturas.AddDescription("En el centro de Ciudad de México hay un lugar, quizá el único del continente americano, donde es posible tomar una foto en la que aparezcan edificios auténticos de tres civilizaciones diferentes: la precolombina, la colonial y la moderna. La Plaza de las Tres Culturas alberga pirámides y ruinas de la prehispánica Tenochtitlán y un convento de la época colonial, y además está rodeada por modernas edificaciones.");
-
-let MuseoNacionalAntropología = new Destination("Museo Nacional de Antropología","Ciudad de México");
-MuseoNacionalAntropología.AddDescription("Este museo localizado en el Bosque de Chapultepec alberga la muestra antropológica y arqueológica prehispánica más variada de América. Prácticamente todas las culturas precolombinas mexicanas y mesoamericanas están representadas a través de piezas auténticas, réplicas, esculturas, incluyendo la famosa Piedra del Sol, mosaicos, cerámicas y otros objetos. Una de sus patrimonios más preciados es la colección de incunables y otros valiosos documentos guardados en la Biblioteca Nacional de Antropología e Historia.");
-
-let BosqueChapultepec = new Destination("Bosque de Chapultepec","Ciudad de México");
-BosqueChapultepec.AddDescription("Este enorme espacio de 678 hectáreas es uno de los parques urbanos más grandes de América Latina. Cuenta con piezas y monumentos representativos de la era prehispánica, de la época virreinal y del México moderno. Sus dos lagos son frecuentados para andar en barca y practicar otros entretenimientos acuáticos. Uno de sus principales atractivos es el Castillo de Chapultepec, el único castillo y casa real en América, por haber sido residencia del Virrey de Nueva España. Otros sitios importantes del bosque son el Altar de la Patria, el Museo de Antropología, el Museo de Arte Moderno y el Museo Tamayo de Arte Contemporáneo. Además, es un refugio de fauna y flora en medio del ajetreo de la ciudad.");
-
-let Xochimilco = new Destination("Xochimilco","Ciudad de México");
-Xochimilco.AddDescription("Pocos lugares fueron más filmados durante la época de oro del cine mexicano que los canales de Xochimilco, con sus pintorescas barcas y barqueros. Las coloridas embarcaciones, llamadas trajineras, circulan apretujadas en un recorrido por distintos puntos de interés, como las islas de Las Muñecas y de La Llorona, la Laguna de Teshuilo y el Museo del Ajolote. No es extraño que los viajeros vayan tomando un tequilita, a los compases de un mariachi móvil que viaja en barca. Otro lugar de Xochimilco que te recomendamos visitar es el Museo Dolores Olmedo Patiño, dedicado a la obra artística de la pareja más famosa del México moderno, Diego Rivera y Frida Kahlo.");
-
-let MuseoFridaKahlo = new Destination("Museo Frida Kahlo","Ciudad de México");
-MuseoFridaKahlo.AddDescription("En la hermosa área central de la Delegación de Coyoacán está el museo dedicado a la coyoacanense más ilustre: Magdalena Carmen Frida Kahlo Calderón. La infortunada Frida, marcada por el polio, un terrible accidente de circulación y un tormentoso matrimonio con el famoso artista Diego Rivera, fue una mujer poco convencional, muy adelantada a su tiempo. La Casa Azul, residencia familiar desde antes del nacimiento de la pintora y luego su casa, ahora es una galería que muestra obra y vivencias de la célebre pareja.");
-
-let Teotihuacan= new Destination("Pirámides de Teotihuacán","Estado de México");
-Teotihuacan.AddDescription("Teotihuacán es «el lugar donde los hombres se convierten en dioses» en la lengua náhuatl y así te sentirás cuando asciendas a la Pirámide del Sol o a la Pirámide de la Luna y observes desde las alturas La Ciudadela, La Calzada de Los Muertos, la Pirámide de la Serpiente Emplumada y el Palacio de Quetzalpapálotl.");
-
-let CentroHistóricoG= new Destination("Centro histórico","Jalisco");
-CentroHistóricoG.AddDescription("La capital del estado de Jalisco es la segunda ciudad más poblada del país y no le va atrás a Ciudad de México en lugares de interés.Entre estos destacan su soberbia catedral, el Museo de la ciudad, el de Paleontología, el Regional, el de Cerámica y el pintoresco Museo De Arte Huichol Wixárika. Guadalajara es una ciudad con mucho movimiento cultural.");
-
-let CatedralGuadalajara= new Destination("Catedral de Guadalajara","Jalisco");
-CatedralGuadalajara.AddDescription("Este imponente templo levantado en honor de la Asunción de María es el edificio más simbólico de la ciudad. Las agujas de sus dos torres neogóticas son una referencia geográfica.Fue construida entre los siglos XVI y XVII y es un patrimonio en peligro, principalmente por su hundimiento a causa de los repetidos movimientos sísmicos que ocurren en esa región del país. En la catedral se guardan las reliquias de la mártir romana Santa Inocencia.");
-//dejar esta linea
-
-let Tequila= new Destination("Tequila","Jalisco");
-Tequila.AddDescription("Este imponente templo levantado en honor de la Asunción de María es el edificio más simbólico de la ciudad. Las agujas de sus dos torres neogóticas son una referencia geográfica.Fue construida entre los siglos XVI y XVII y es un patrimonio en peligro, principalmente por su hundimiento a causa de los repetidos movimientos sísmicos que ocurren en esa región del país. En la catedral se guardan las reliquias de la mártir romana Santa Inocencia.");
-
-let Guanajuato= new Destination("Guanajuato","Guanajuato");
-Guanajuato.AddDescription("Esta bella ciudad, universitaria, colonial y con una intensa vida cultural, surgió gracias a la explotación del oro y la plata, y hoy es Patrimonio de la Humanidad. Entre sus lugares imprescindibles están la Basílica Colegiata de Nuestra Señora de Guanajuato, la Plaza de la Paz, la Alhóndiga de Granaditas, el Palacio Legislativo, el Teatro Juárez, la Universidad, el Templo de los Jesuitas y el Mercado Hidalgo. Por el mes de octubre, la ciudad es sede del Festival Internacional Cervantino, famoso evento dedicado la música de todos los géneros y culturas, con espacio para el teatro, la ópera, las letras y otras manifestaciones culturales.");
-
-let Taxco= new Destination("Taxco","Guerrero");
-Taxco.AddDescription("Engastado en la montaña como una joya valiosa, está un pueblo de casas blancas, Taxco de Alarcón, que maravilla al turista desde la distancia por su bella e impecable arquitectura. Taxco vive del turismo y de la joyería de plata, campo en el que sus artesanos y orfebres son mundialmente conocidos.");
-
-let ZonasMerida= new Destination("Las zonas arqueológicas en Mérida","Yucatán");
-ZonasMerida.AddDescription("A su pasado maya y colonial, la capital del estado de Yucatán une un perfil moderno, de ciudad particularmente interesada por las ciencias. Un conjunto de yacimientos arqueológicos cercanos atestiguan su pasado prehispánico, entre los que destacan Dzibilchaltún, Caucel y Xoclán.Los museos y monumentos más representativos son el Palacio Cantón, el Museo del Mundo Maya, el Museo de la Canción Yucateca y la Casa de los Montejo, un hermoso ejemplo de la arquitectura residencial del siglo XVI. Otro atractivo de Mérida son sus haciendas que se dedicaban al cultivo del sisal, ahora convertidas en museos y sitios de interés.");
-
-let Guelaguetza= new Destination("La Guelaguetza en Oaxaca de Juárez","Oaxaca");
-Guelaguetza.AddDescription("A su pasado maya y colonial, la capital del estado de Yucatán une un perfil moderno, de ciudad particularmente interesada por las ciencias. Un conjunto de yacimientos arqueológicos cercanos atestiguan su pasado prehispánico, entre los que destacan Dzibilchaltún, Caucel y Xoclán.Los museos y monumentos más representativos son el Palacio Cantón, el Museo del Mundo Maya, el Museo de la Canción Yucateca y la Casa de los Montejo, un hermoso ejemplo de la arquitectura residencial del siglo XVI. Otro atractivo de Mérida son sus haciendas que se dedicaban al cultivo del sisal, ahora convertidas en museos y sitios de interés.");
-
-let Toluca= new Destination("Toluca","Estado de México");
-Toluca.AddDescription("La capital del estado de México, Toluca de Lerdo, ofrece un conjunto de atracciones que mezclan el pasado del periodo virreinal y los tiempos modernos.Sus obras arquitectónicas más llamativas son los portales, convertidos en emblemas de la ciudad; la Catedral de San José, sobrio templo neoclásico frente a la Plaza de Los Mártires, la Iglesia de Nuestra Señora del Carmen y los palacios de los poderes públicos (Municipal, Gubernamental y Legislativo).El jardín botánico, conocido como el Cosmovitral, es una bella edificación etilo Art Noveau de cristal y hierro forjado, que data de principios del siglo XX.");
-
-let MaleconMazatlan= new Destination("El Malecón de Mazatlán","Sinaloa");
-MaleconMazatlan.AddDescription("Es una ciudad en la que coexisten su vieja estirpe colonial y su moderna infraestructura para el turismo, siendo llamada La Perla del Pacífico.En el centro histórico hay que visitar la catedral-basílica, un bello templo barroco en el que se rinde veneración a la Inmaculada Concepción.También sobresalen en el casco viejo el Teatro Ángela Peralta, la Plazuela Machado y el Centro Municipal de las Artes, que funciona en el edificio del antiguo Hotel Iturbide.Uno de los corredores más activos de la ciudad es su largo malecón de 21 kilómetros. Los navegantes cuentan con un imponente faro situado en la cúspide del Cerro del Crestón. El Carnaval de Mazatlán se ha hecho célebre por su colorido, caracterizado por los inmensos monigotes de los desfiles.");
-
-let MonumentosLeon= new Destination("Los monumentos en León","Guanajuato");
-MonumentosLeon.AddDescription("La hermosa ciudad guanajuatense tiene varios apodos. Uno de ellos es «La Capital Mundial del Calzado» por su especialización desde mediados del siglo XX en el trabajo del cuero.La ciudad ha venido reorientando su economía hacia otras actividades, con el turismo en lugar prominente. Sus monumentos más simbólicos son la Catedral-Basílica de la Madre Santísima de la Luz, el Templo Expiatorio del Sagrado Corazón de Jesús y el Cristo Rey.");
-
-let chjuarez= new Destination("El centro histórico de Ciudad Juárez","Chihuahua");
-chjuarez.AddDescription("Con el río Bravo haciendo de línea fronteriza entre México y Estados Unidos, del lado norteamericano está la ciudad tejana de El Paso y del lado mexicano se sitúa Ciudad Juárez.En el centro histórico están la catedral, la Misión de Guadalupe y el Museo de la Revolución en la Frontera, dedicado a la Revolución Mexicana en esa zona del país. Otros atractivos juarenses son el Parque Público Federal El Chamizal, que cuenta con un museo de arqueología, y el Monumento a la Mexicanidad. A 50 kilómetros de la ciudad están los Médanos de Samalayuca, un atractivo para el turismo de aventura.");
-
-let MomiasCelaya= new Destination("El museo de las momias en Celaya","Guanajuato");
-MomiasCelaya.AddDescription("Fue inicialmente una comunidad del pueblo otomí. Los entusiastas de la peculiar corriente turística del misterio y el terror tienen en Celaya uno de sus santuarios, que es más bien un cementerio.El panteón municipal es frecuentado para admirar su sobrecogedor desorden y para visitar el Museo de la Momias. Pero no vayas a creer que Celaya es una ciudad sombría. Sus jardines, alamedas, parques, museos, murales, haciendas y su popular Bola de Agua, harán que pases ratos muy placenteros en la localidad guanajuatense.");
-
-let Tula = new Destination("Tula","Hidalgo");
-Tula.AddDescription("El emplazamiento náhuatl de Tollan-Xicocotitlan, mejor conocido como Tula, es célebre por sus Atlantes, los colosales monolitos de 4,5 metros de altura tallados en roca basáltica.Integran un artístico conjunto de guerreros toltecas representados con pectorales de mariposa y su armamento cotidiano, incluyendo cuchillo de pedernal. En la época prehispánica Tula fue la capital tolteca y el principal centro de poder de los Valles de México y de Puebla, viviendo su esplendor entre los siglos X y XII. Otras edificaciones de interés del asentamiento precolombino son sus pirámides, el Palacio Quemado, los campos para el Juego de Pelota y el Coatepantli o Muro de las Serpientes, bellamente decorado con relieves.");
-
-let Tecate = new Destination("Tula","Hidalgo");
-Tecate.AddDescription("Este Pueblo Mágico mexicano en extremo noroccidental del país, en la península de Baja California, es popular por sus spas, amparado en su acogedor ambiente colonial, su clima siempre fresco y el estupendo entorno natural que le confieren sus campos y montañas.Una de las tradiciones mejor cultivadas de Tecate es la de la elaboración del pan. Hay panaderías por todos lados, que ofrecen el arte del amasado y el horneado en todas las variedades. Otro atractivo son las pinturas rupestres hechas en granitos que se encuentran en el Rancho San José. Esta solo a unos 20 mintuos de Tijuana.");
-
-let PalacioNacional = new Destination("Palacio Nacional","Ciudad de México");
-PalacioNacional.AddDescription("Esta espléndida edificación barroca ha sido el centro del poder en México desde los comienzos de la Ciudad de México. Fue residencia del conquistador Hernán Cortés, casa de gobierno del Virreinato de Nueva España en la época colonial y sede del gobierno en el México republicano. En su interior, con libre acceso para el público, están los magníficos murales pintados por Diego Rivera. Con sus 5 piezas, el genial muralista recorre la historia del país desde la época prehispánica.");
-
-let TodosSantos = new Destination("Todos Santos","Baja California Sur");
-TodosSantos.AddDescription("Otro Pueblo Mágico mexicano, en el estado de Baja California Sur. Por su apacible clima es comparado con Cuernavaca y sus verdes campos están repletos de árboles frutales, especialmente mangos, paltas y papayas.Está situado en el extremo sur de la península de Baja California, como custodiando el Pacífico sin descuidar la entrada al estrecho Golfo de California o Mar de Cortés.Sus playas frente al océano son ideales para la práctica del surf. Es el lugar de descanso preferido por la gente ligada al mundo del arte, por su clima, sus espacios limpios, amplios y abiertos, y su vocación cultural.");
-
-let SanCristobal = new Destination("San Cristóbal de las Casas","Chiapas");
-SanCristobal.AddDescription("Esta pequeña ciudad chiapaneca es una especie de encrucijada para partir hacia las distintas zonas arqueológicas que hay en esa parte de México. Cuenta con un muy bien cuidado acervo arquitectónico, como la Catedral, el Templo y Exconvento de Santo Domingo de Guzmán, el Templo de Nuestra Señora de Guadalupe, el Palacio Municipal, la Casa Utrilla y la Casa del Congreso.  Cerca de la ciudad hay varios parques ecológicos y turísticos como las Grutas de Rancho Nuevo, El Arcotete, Las Canastas y las Grutas de Mamut.");
-
-let Comala = new Destination("Comala","Colima");
-Comala.AddDescription("Con lo primero que hay que tener cuidado en este Pueblo Mágico es con no toparse con el fantasma de Pedro Páramo, el famoso personaje de la novela homónima de Juan Rulfo, cabalgando por las calles desiertas.La fama del lugar la cimentó la mítica figura, pero ahora se sostiene por su bella arquitectura y diversos encantos para residentes y turistas, destacando su arte culinario. Son famosas sus botanas, que sirven en los conocidos Portales de Comala, acompañadas de diferentes bebidas.");
-
-let Cholula = new Destination("Cholula","Puebla");
-Cholula.AddDescription("Cholula de Rivadavia es una ciudad poblana situada donde estuviera la localidad  precolombina de Cholula, de la que se conservan valiosas muestras arqueológicas. Su pueblo fue exterminado por Hernán Cortés, secundado por aliados indígenas, en lo que se recuerda como uno de los genocidios más terribles de la conquista española de América. En la también llamada San Pedro Cholula son dignos de admirar el Convento de San Gabriel, la Iglesia de Nuestra Señora de los Remedios y la Capilla Real. Dentro del patrimonio arqueológico sobresale el Templo de Tláloc.");
-
-let Papantla = new Destination("Papantla","Veracruz");
-Papantla.AddDescription("La localidad veracruzana de Papantla de Olarte es de herencia totonaca y es Pueblo Mágico y Patrimonio de la Humanidad por su arquitectura, sus sitios arqueológicos, pero muy especialmente por sus danzas autóctonas. La Danza o Rito de los Voladores es uno de los espectáculos más aplaudidos por los turistas.Los danzantes hacen un peligroso y vistoso descenso desde el «palo volador» simbolizando a la lluvia que cae. Otras danzas folclóricas de Papantla son Los Guaguas, de adoración al Sol, y Los Negritos, en la que se funden África, España y América.");
-
-let ChichénItzá = new Destination("Chichén Itzá","Yucatán");
-ChichénItzá.AddDescription("Es uno de los yacimientos arqueológicos más importantes del continente americano. Su Templo de Kukulcán es una de las Nuevas Siete Maravillas del Mundo Moderno, junto con la Gran Pirámide Guiza y otros 5 monumentos culturales del planeta. Está emplazado en el estado de Yucatán en lo que fue un importante centro ceremonial y ciudad maya. Otros lugares relevantes de Chichén Itzá son El Castillo, el Tzompantli o Plataforma de los Cráneos, El Caracol, el Templo de Los Guerreros, el complejo del Juego de Pelota y el Cenote Sagrado.");
-
-let Acapulco = new Destination("Acapulco","Guerrero");
-Acapulco.AddDescription("La primera zona de playa mexicana de fama mundial lucha por recuperar su antiguo esplendor de la década de los años 1950, cuando era el centro vacacional de playa preferido por las luminarias del cine estadounidense. Ahora, a la par de centro turístico, es una importante escala en la ruta marítima de la costa del Pacífico entre México y Estados Unidos.Uno de sus principales atractivos son los saltos de los indígenas en La Quebrada, un acantilado de 35 metros de altura desde la plataforma de lanzamiento. Dado que en el fondo, la profundidad  mar varía con el oleaje, el clavado se convierte en un acto de vértigo. Otros lugares de interés son la Isla Roqueta y en la ciudad, la catedral de Nuestra Señora de la Soledad, el Fuerte de San Diego y el Parque Papagayo. Por mayo se celebra en la ciudad el Festival de Acapulco, uno de los más conocidos de la música pop.");
-
-let Ixtapa = new Destination("Ixtapa","Guerrero");
-Ixtapa.AddDescription("Es un moderno centro turístico del Pacífico mexicano en Guerrero, el segundo destino más importante del estado después de Acapulco. Su red hotelera es de clase mundial, mezclando la arquitectura contemporánea con el estilo colonial hispano. Forma, junto su la cercana Zihuatanejo, uno de los vértices del llamado Triángulo del Sol, cuyos otras dos esquinas son Acapulco y Taxco. A poca distancia de la costa está la isla de Ixtapa, un valioso refugio de fauna.");
-
-let Zihuatanejo = new Destination("Zihuatanejo","Guerrero");
-Zihuatanejo.AddDescription("Hace un binomio con Ixtapa, frecuentemente llamado Ixtapa-Zihuatanejo, en la que la primera aporta el lujo y el confort moderno, mientras que la segunda ofrece más tradición y tranquilidad. Es una pequeña ciudad en la que se armonizan el estilo de vida de una localidad pesquera con las demandas del turismo más relajado que busca refugio allí. Por supuesto, es lugar ideal para degustar los frescos frutos del mar preparados según el arte culinario guerrerense. Entre sus festividades más importantes están el Festival Anual Zihua Vela, que reúne embarcaciones de todo el mundo durante una semana de febrero, y el Festival Internacional de Guitarra, en marzo.");
-
-let RivieraMaya = new Destination("Riviera Maya","Quintana Roo");
-RivieraMaya.AddDescription("Es uno de los corredores turísticos más importantes del Mar Caribe, entre Puerto Morelos y Punta Allen en el estado de Quintana Roo. Su principal destino urbano es Playa del Carmen y sus destinos insulares principales son Cozumel e Isla Mujeres. En la Riviera está también el yacimiento arqueológico de Tulum; Akumal, con magníficas playas y cenotes; el parque temático y ecológico de Xcaret y el Parque Nacional Arrecife de Puerto Morelos. Muy cerca está Cancún, uno de los destinos de playa más pujantes de la actualidad mundial.");
-
-let RivieraNayarita = new Destination("Riviera Nayarita","Nayarit");
-RivieraNayarita.AddDescription("Cambiando de océano, nos vamos a otra Riviera, la Nayarit, que comienza cerca de Puerto Vallarta, uno de los lugares más visitados del Pacífico mexicano, y termina en la Boca de Tecapán. Casi todos sus atractivos de playa están en la Bahía de Banderas, con aguas en los estados de Jalisco y Nayarit. La Riviera Nayarit sobresale por sus hermosas playas, con oleajes para todos los gustos, la armonía de los espacios marítimos con una variada y atractiva flora y fauna, y su cómoda infraestructura turística, con cabida para todos los presupuestos.");
-
-let Cozumel = new Destination("Cozumel","Quintana Roo");
-Cozumel.AddDescription("Esta isla del Caribe mexicano, frente a la Rivera Maya, cuenta con un moderno cinturón hotelero y encantadoras playas, entre las que deben mencionarse Punta Sur, San Francisco, San Juan, Santa María y Playa Encantada.Cozumel es lugar ideal para descansar, observar la vida submarina, practicar deportes de playa, degustar los frescos pescados y mariscos del Mar Caribe y conocer pintorescas tradiciones. Entre estas se encuentran la Feria del Cedral, unas fiestas en honor de la Santa Cruz, a principios de mayo. El carnaval de Cozumel ha ganado fama internacional por su sincretismo cultural.");
-
-let Granaditas = new Destination("La Alhóndiga de Granaditas","Guanajuato");
-Granaditas.AddDescription("Una alhóndiga era un edificio que servía como gran almacén y punto de venta de granos y el de Granaditas fue construido en la ciudad de Guanajuato a finales del siglo XVIII. Se encuentra en la Calle Medizábal y es una edificación neoclásica de 3 plantas, muy austera, que parece una casa fuerte.Fue escenario de un hecho sangriento el 28 de septiembre de 1810, cuando un grupo de Insurgentes al mando de Hidalgo, Allende, Aldama y Jiménez, penetró en el edificio en el que se habían refugiado tropas y civiles españoles, ocurriendo una masacre.");
-
-let ZocaloPuebla = new Destination("Zócalo de Puebla","Puebla");
-ZocaloPuebla.AddDescription("El zócalo o plaza principal es el corazón del centro histórico de la ciudad de Puebla de Zaragoza, que fue declarado Patrimonio de la Humanidad. Frente al zócalo se encuentran emblemáticos inmuebles poblanos, como la catedral y el palacio municipal, y fue en sus comienzos una plaza de mercado.En el centro del zócalo se ponía la horca para ejecutar a los reos condenados a muerte y era el sitio de esquilamiento público de los indígenas y mulatos reincidentes en embriaguez. También fue escenario público de obras teatrales y de celebraciones populares.La catedral  de Puebla, situada en el lado sur del zócalo, fue consagrada a la Inmaculada Concepción a mediados del siglo XVII y es considerada el primer templo suntuoso edificado en el Nuevo Mundo. Alberga uno de los patrimonios de arte religioso más importantes de México.");
-
-let CiudadQueretaro = new Destination("La Ciudad de Querétaro","Querétaro");
-CiudadQueretaro.AddDescription("Entre los lugares turísticos de México, Santiago de Querétaro sobresale por su descollante historia. Fue sede en 1810 de la conspiración embrionaria del movimiento independentista; en 1854 fue lugar de estreno del himno nacional; fue escenario de la derrota final y fusilamiento del emperador Maximiliano en 1867; y fue la ciudad en la que se deliberó y promulgó en 1917 la constitución actual de la república mexicana.Su centro histórico fue reconocido como Patrimonio de la Humanidad por la UNESCO y contiene monumentos históricos como el acueducto de la época virreinal, símbolo de la ciudad; el Teatro de la República, los templos y ex conventos de la Santa Cruz, San Agustín y San Francisco de Asís; la Casa de la Corregidora, los Reales Colegios de San Francisco Javier y San Ignacio, la Academia de Bellas Artes, el Gran Hotel de Querétaro y la Casa de la Marquesa.");
-
-let Xcaret = new Destination("Xcaret","Quintana Roo");
-Xcaret.AddDescription("La Riviera Maya cuenta con los parques ecoturísticos y de aventuras más excitantes de México y Xcaret es uno de los que está en primera línea. Se encuentra a 10 km al sur de Playa del Carmen y tiene ríos subterráneos, cuevas, sitios arqueológicos, la réplica de un pueblo maya, una hacienda henequenera, 2 capillas (Virgen de Guadalupe y San Francisco de Asís) y una Torre Escénica desde la que se dominan unos paisajes impresionantes.Otras atracciones de Xcaret son la Casa de los Murmullos, un aposento con una acústica especial; el cementerio mexicano Puente al Paraíso, que simboliza la peculiar cultura de México relacionada con la muerte; y Mundo de Niños, un oasis infantil para chicos menores de 12 años con toboganes, túneles, puentes colgantes y cenotes.");
-
-let PuertoVallarta = new Destination("PuertoVallarta","Jalisco");
-PuertoVallarta.AddDescription("Es el principal destino turístico de México en el Pacífico, debido a sus maravillosas playas y a la coexistencia de la ciudad moderna con el Viejo Vallarta o Zona Romántica. El Viejo Vallarta es el casco antiguo de la ciudad, edificado a partir de mediados del siglo XIX y es un acogedor espacio de calles estrechas, románticos hoteles y las playas más simbólicas de la ciudad.Una de ellas es Playa Los Muertos, un vibrante arenal en el que siempre hay actividad, situada en el emblemático malecón, un paseo de aproximadamente 1 km frente al Pacífico que es un museo de arte al aire libre por la gran cantidad de esculturas de gran formato que alberga.Puerto Vallarta cuenta con hoteles de alta gama y alojamientos económicos y su parque de restaurantes tiene propuestas gastronómicas de alta cocina clásica nacional e internacional, así como nuevas cocinas y platillos típicos.");
-
-let Sayulita = new Destination("Sayulita","Nayarit");
-Sayulita.AddDescription("Esta playa de la Riviera Nayarit, en la Bahía de Banderas, situada a 42 km al noroeste de Puerto Vallarta, es el principal templo de los surfistas mexicanos por sus altas y constantes olas. Es sede frecuente de competencias nacionales e internacionales de surf y en el arenal funcionan escuelas que enseñan a surfear y a hacerse un experto sobre las olas.Sayulita fue declarada Pueblo Mágico en virtud de sus atributos playeros, que incluyen playas de fuerte oleaje y playas calmadas, así como por su pintoresco pueblo embutido entre la playa y las colinas.Sayulita tiene un parque hotelero muy completo, que incluye Sayulita Beach House, El Pueblito de Sayulita, Bellavista Sayulita Boutique Hotel, Casa de la Ballena y Hotel Peix Sayulita. También cuenta con restaurantes de cocina internacional y para degustar la deliciosa gastronomía nayarita de la costa, incluyendo el pecado zarandeado, bandera del arte culinario local.");
+// LISTENERS TO REDIRECT EACH ID TO HIS HTML PAGE
+document.getElementById("1").addEventListener("click", () => {
+  window.location.href = "./destinations/colima/comala.html";
+});
+document.getElementById("2").addEventListener("click", () => {
+  window.location.href = "./destinations/colima/manzanillo.html";
+});
+document.getElementById("3").addEventListener("click", () => {
+  window.location.href = "./destinations/jalisco/tequila.html";
+});
+document.getElementById("4").addEventListener("click", () => {
+  window.location.href = "./destinations/jalisco/puertoVallarta.html";
+});
+document.getElementById("5").addEventListener("click", () => {
+  window.location.href = "./destinations/jalisco/guadalajaraCentro.html";
+});
+document.getElementById("6").addEventListener("click", () => {
+  window.location.href = "./destinations/jalisco/careyes.html";
+});
+document.getElementById("7").addEventListener("click", () => {
+  window.location.href = "./destinations/oaxaca/monteAlban.html";
+});
+document.getElementById("8").addEventListener("click", () => {
+  window.location.href = "./destinations/oaxaca/hierveElAgua.html";
+});
+document.getElementById("9").addEventListener("click", () => {
+  window.location.href = "./destinations/oaxaca/mitla.html";
+});
+document.getElementById("10").addEventListener("click", () => {
+  window.location.href = "./destinations/oaxaca/huatulco.html";
+});
+document.getElementById("11").addEventListener("click", () => {
+  window.location.href = "./destinations/oaxaca/oaxacaCentro.html";
+});
+document.getElementById("12").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/aguaAzul.html";
+});
+document.getElementById("13").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/canonDelSumidero.html";
+});
+document.getElementById("14").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/elArcotete.html";
+});
+document.getElementById("15").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/lagunasMontebello.html";
+});
+document.getElementById("16").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/cascadasElChiflon.html";
+});
+document.getElementById("17").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/montesAzules.html";
+});
+document.getElementById("18").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/sanCristobalCasas.html";
+});
+document.getElementById("19").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/comitanDominguez.html";
+});
+document.getElementById("20").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/chiapaDeCorzo.html";
+});
+document.getElementById("21").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/palenque.html";
+});
+document.getElementById("22").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/yaxchilan.html";
+});
+document.getElementById("23").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/bonampak.html";
+});
+document.getElementById("24").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/tenamPuente.html";
+});
