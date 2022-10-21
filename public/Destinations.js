@@ -1,6 +1,5 @@
-class Destination{
-        
-    construtor(name,location){
+class Destination{        
+    constructor(name,location){
         this.name=name;
         this.location=location;
         this.description="";
@@ -161,10 +160,3 @@ PuertoVallarta.AddDescription("Es el principal destino turístico de México en 
 
 let Sayulita = new Destination("Sayulita","Nayarit");
 Sayulita.AddDescription("Esta playa de la Riviera Nayarit, en la Bahía de Banderas, situada a 42 km al noroeste de Puerto Vallarta, es el principal templo de los surfistas mexicanos por sus altas y constantes olas. Es sede frecuente de competencias nacionales e internacionales de surf y en el arenal funcionan escuelas que enseñan a surfear y a hacerse un experto sobre las olas.Sayulita fue declarada Pueblo Mágico en virtud de sus atributos playeros, que incluyen playas de fuerte oleaje y playas calmadas, así como por su pintoresco pueblo embutido entre la playa y las colinas.Sayulita tiene un parque hotelero muy completo, que incluye Sayulita Beach House, El Pueblito de Sayulita, Bellavista Sayulita Boutique Hotel, Casa de la Ballena y Hotel Peix Sayulita. También cuenta con restaurantes de cocina internacional y para degustar la deliciosa gastronomía nayarita de la costa, incluyendo el pecado zarandeado, bandera del arte culinario local.");
-
-
-
-
-
-
-
