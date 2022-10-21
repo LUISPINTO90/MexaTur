@@ -5,168 +5,168 @@ let products = {
       productName: "Comala",
       category: "Colima",
       price: "Ubicado en el estado de Colima",
-      image: "/img/destinations/comala.png",
+      image: "../img/destinations/comala.png",
     },
     {
       //2
       productName: "Manzanillo",
       category: "Colima",
       price: "Ubicado en el estado de Colima",
-      image: "/img/destinations/manzanillo.png",
+      image: "../img/destinations/manzanillo.png",
     },
     {
       //3
       productName: "Tequila",
       category: "Jalisco",
       price: "Ubicado en el estado de Jalisco",
-      image: "/img/destinations/tequila.png",
+      image: "../img/destinations/tequila.png",
     },
     {
       //4
       productName: "Puerto Vallarta",
       category: "Jalisco",
       price: "Ubicado en el estado de Jalisco",
-      image: "/img/destinations/puertoVallarta.png",
+      image: "../img/destinations/puertoVallarta.png",
     },
     {
       //5
       productName: "Guadalajara (Centro)",
       category: "Jalisco",
       price: "Ubicado en el estado de Jalisco",
-      image: "/img/destinations/guadalajaraCentro.png",
+      image: "../img/destinations/guadalajaraCentro.png",
     },
     {
       //6
       productName: "Careyes",
       category: "Jalisco",
       price: "Ubicado en el estado de Jalisco",
-      image: "/img/destinations/careyes.png",
+      image: "../img/destinations/careyes.png",
     },
     {
       //7
       productName: "Monte Alban",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
-      image: "/img/destinations/monteAlban.png",
+      image: "../img/destinations/monteAlban.png",
     },
     {
       //8
       productName: "Hierve el Agua",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
-      image: "/img/destinations/hierveElAgua.png",
+      image: "../img/destinations/hierveElAgua.png",
     },
     {
       //9
       productName: "Mitla",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
-      image: "/img/destinations/mitla.png",
+      image: "../img/destinations/mitla.png",
     },
     {
       //10
       productName: "Huatulco",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
-      image: "/img/destinations/huatulco.png",
+      image: "../img/destinations/huatulco.png",
     },
     {
       //11
       productName: "Oaxaca (Centro)",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
-      image: "/img/destinations/oaxacaCentro.png",
+      image: "../img/destinations/oaxacaCentro.png",
     },
     {
       //12
       productName: "Cascadas de Agua Azul",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/cascadasAguaAzul.png",
+      image: "../img/destinations/cascadasAguaAzul.png",
     },
     {
       //13
       productName: "Parque Nacional Cañon del Sumidero",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/canonDelSumidero.png",
+      image: "../img/destinations/canonDelSumidero.png",
     },
     {
       //14
       productName: "Parque Ecoturistico el Arcotete",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/elArcotete.png",
+      image: "../img/destinations/elArcotete.png",
     },
     {
       //15
       productName: "Parque Nacional Lagunas de Montebello",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/lagunasDeMontebello.png",
+      image: "../img/destinations/lagunasDeMontebello.png",
     },
     {
       //16
       productName: "Centro Ecoturistico Cascadas el Chiflon",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/cascadasElChiflon.png",
+      image: "../img/destinations/cascadasElChiflon.png",
     },
     {
       //17
       productName: "Parque Natural Montes Azules",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/montesAzules.png",
+      image: "../img/destinations/montesAzules.png",
     },
     {
       //18
       productName: "San Cristobal de las Casas",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/sanCristobalDeLasCasas.png",
+      image: "../img/destinations/sanCristobalDeLasCasas.png",
     },
     {
       //19
       productName: "Comitan de Dominguez",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/comitan.png",
+      image: "../img/destinations/comitan.png",
     },
     {
       //20
       productName: "Chiapa de Corzo",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/chiapaDeCorzo.png",
+      image: "../img/destinations/chiapaDeCorzo.png",
     },
     {
       //21
       productName: "Zona Arqueologica de Palenque",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/palenque.png",
+      image: "../img/destinations/palenque.png",
     },
     {
       //22
       productName: "Zona Arqueologica de Yaxchilan",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/yaxchilan.png",
+      image: "../img/destinations/yaxchilan.png",
     },
     {
       //23
       productName: "Bonampak",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/bonampak.png",
+      image: "../img/destinations/bonampak.png",
     },
     {
       //24
       productName: "Zona Arqueologica de Tenam Puente",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
-      image: "/img/destinations/tenamPuente.png",
+      image: "../img/destinations/tenamPuente.png",
     },
   ],
 };
