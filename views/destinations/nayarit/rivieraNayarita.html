@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/public/style.css" />
+
+    <!-- Google Font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SweetAlert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Font Awesome Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <header class="headerProfile">
+        <article>
+          <article>
+            <img id="back" class="miniImg" src="/img/back.png" />
+            <article class="title">RIVIERA NAYARITA</article>
+            <img class="imgDestination" src="/img/destinations/rivieraNayarita.png" />
+          </article>
+        </article>
+      </header>
+    </section>
+
+    <section>
+      <main>
+        <article class="subtitle">Descripci&oacute;n</article>
+
+        <p class="longText">
+            Cambiando de océano, nos vamos a otra Riviera, la Nayarit, que comienza 
+            cerca de Puerto Vallarta, uno de los lugares más visitados del Pacífico 
+            mexicano, y termina en la Boca de Tecapán. Casi todos sus atractivos de 
+            playa están en la Bahía de Banderas, con aguas en los estados de Jalisco 
+            y Nayarit. La Riviera Nayarit sobresale por sus hermosas playas, con 
+            oleajes para todos los gustos, la armonía de los espacios marítimos con 
+            una variada y atractiva flora y fauna, y su cómoda infraestructura turística, 
+            con cabida para todos los presupuestos.
+        </p>
+
+        <article class="subtitle">Calificar destino</article>
+        <article>
+          <input
+            class="swal2-confirm swalBtnColor swal2-styled search"
+            type="button"
+            id="calificarRivieraNayarita"
+            value="Calificar"
+          />
+        </article>
+      </main>
+    </section>
+
+    <section>
+      <main>
+        <article class="title">CALIFICACIONES</article>
+        <div id="result"></div>
+      </main>
+    </section>
+
+    <!-- Scripts -->
+
+    <script>
+      document.getElementById("back").addEventListener("click", () => {
+        window.location.href = "/views/search.html";
+      });
+    </script>
+
+    <script>
+      // ALERT CALIFICAR COMALA
+      document
+        .getElementById("calificarRivieraNayarita")
+        .addEventListener("click", () => {
+          Swal.fire({
+            customClass: {
+              confirmButton: "swalBtnColor",
+              title: "swalTitle",
+              validationMessage: "validationColor",
+            },
+            title: "CALIFICACI&Oacute;N",
+            background: "#fff",
+            html: `
+            <form>
+                <div class="rating">
+                    <input type="radio" hidden name="rate" id="rating-opt5" data-idx="0" />
+                    <label for="rating-opt5"><span>Excelente</span></label>
+
+                    <input type="radio" hidden name="rate" id="rating-opt4" data-idx="1" />
+                    <label for="rating-opt4"><span>Muy Bueno</span></label>
+
+                    <input type="radio" hidden name="rate" id="rating-opt3" data-idx="2" />
+                    <label for="rating-opt3"><span>Bueno</span></label>
+
+                    <input type="radio" hidden name="rate" id="rating-opt2" data-idx="3" />
+                    <label for="rating-opt2"><span>Regular</span></label>
+
+                    <input type="radio" hidden name="rate" id="rating-opt1" data-idx="4" />
+                    <label for="rating-opt1"><span>Malo</span></label>
+                </div>
+            </form>
+            `,
+            confirmButtonText: "Enviar Calificacion",
+            focusConfirm: false,
+            preConfirm: () => {
+              let opc1 = document.getElementById("rating-opt1");
+              let opc2 = document.getElementById("rating-opt2");
+              let opc3 = document.getElementById("rating-opt3");
+              let opc4 = document.getElementById("rating-opt4");
+              let opc5 = document.getElementById("rating-opt5");
+
+              let result = document.getElementById("result");
+
+              if (opc1.checked) {
+                localStorage.votoRivieraNayarita = result.innerHTML += `
+                <article>
+                    <img class="userImg" src="/img/user.png" />
+                    <article id="userNameProfile" class="subtitle"></article>
+                    <p>${localStorage.usuario} ha calificado con <b>⭐</b></p>
+                </article>
+                `;
+              } else if (opc2.checked) {
+                localStorage.votoRivieraNayarita = result.innerHTML += `
+                <article>
+                    <img class="userImg" src="/img/user.png" />
+                    <article id="userNameProfile" class="subtitle"></article>
+                    <p>${localStorage.usuario} ha calificado con <b>⭐⭐</b></p>
+                </article>
+                `;
+              } else if (opc3.checked) {
+                localStorage.votoRivieraNayarita = result.innerHTML += `
+                <article>
+                    <img class="userImg" src="/img/user.png" />
+                    <article id="userNameProfile" class="subtitle"></article>
+                    <p>${localStorage.usuario} ha calificado con <b>⭐⭐⭐</b></p>
+                </article>
+                `;
+              } else if (opc4.checked) {
+                localStorage.votoRivieraNayarita = result.innerHTML += `
+                <article>
+                    <img class="userImg" src="/img/user.png" />
+                    <article id="userNameProfile" class="subtitle"></article>
+                    <p>${localStorage.usuario} ha calificado con <b>⭐⭐⭐⭐</b></p>
+
+                </article>
+                `;
+              } else if (opc5.checked) {
+                localStorage.votoRivieraNayarita = result.innerHTML += `
+                <article>
+                    <img class="userImg" src="/img/user.png" />
+                    <article id="userNameProfile" class="subtitle"></article>
+                    <p>${localStorage.usuario} ha calificado con <b>⭐⭐⭐⭐⭐</b></p>
+                </article>
+                `;
+              }
+            },
+          });
+        });
+
+      if (localStorage.votoRivieraNayarita== undefined) {
+        result.innerHTML = "";
+      } else {
+        result.innerHTML += localStorage.votoRivieraNayarita;
+      }
+    </script>
+  </body>
+</html>

@@ -44,130 +44,208 @@ let products = {
     },
     {
       //7
+      productName: "Catedral de Guadalajara",
+      category: "Jalisco",
+      price: "Ubicado en el estado de Jalisco",
+      image: "../img/destinations/catedralGuadalajara.png",
+    },
+    {
+      //8
       productName: "Monte Alban",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
       image: "../img/destinations/monteAlban.png",
     },
     {
-      //8
+      //9
       productName: "Hierve el Agua",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
       image: "../img/destinations/hierveElAgua.png",
     },
     {
-      //9
+      //10
       productName: "Mitla",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
       image: "../img/destinations/mitla.png",
     },
     {
-      //10
+      //11
       productName: "Huatulco",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
       image: "../img/destinations/huatulco.png",
     },
     {
-      //11
+      //12
       productName: "Oaxaca (Centro)",
       category: "Oaxaca",
       price: "Ubicado en el estado de Oaxaca",
       image: "../img/destinations/oaxacaCentro.png",
     },
     {
-      //12
+      //13
       productName: "Cascadas de Agua Azul",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/cascadasAguaAzul.png",
     },
     {
-      //13
+      //14
       productName: "Parque Nacional Cañon del Sumidero",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/canonDelSumidero.png",
     },
     {
-      //14
+      //15
       productName: "Parque Ecoturistico el Arcotete",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/elArcotete.png",
     },
     {
-      //15
+      //16
       productName: "Parque Nacional Lagunas de Montebello",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/lagunasDeMontebello.png",
     },
     {
-      //16
+      //17
       productName: "Centro Ecoturistico Cascadas el Chiflon",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/cascadasElChiflon.png",
     },
     {
-      //17
+      //18
       productName: "Parque Natural Montes Azules",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/montesAzules.png",
     },
     {
-      //18
+      //19
       productName: "San Cristobal de las Casas",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/sanCristobalDeLasCasas.png",
     },
     {
-      //19
+      //20
       productName: "Comitan de Dominguez",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/comitan.png",
     },
     {
-      //20
+      //21
       productName: "Chiapa de Corzo",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/chiapaDeCorzo.png",
     },
     {
-      //21
+      //22
       productName: "Zona Arqueologica de Palenque",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/palenque.png",
     },
     {
-      //22
+      //23
       productName: "Zona Arqueologica de Yaxchilan",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/yaxchilan.png",
     },
     {
-      //23
+      //24
       productName: "Bonampak",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/bonampak.png",
     },
     {
-      //24
-      productName: "Zona Arqueologica de Tenam Puente",
+      //25
+      productName: "Zona arqueologica de Tenam Puente",
       category: "Chiapas",
       price: "Ubicado en el estado de Chiapas",
       image: "../img/destinations/tenamPuente.png",
     },
+    {
+      //26
+      productName: "Bacalar",
+      category: "QuintanaRoo",
+      price: "Ubicado en el estado de Quintana Roo",
+      image: "../img/destinations/bacalar.png",
+    },
+    {
+      //27
+      productName: "Cozumel",
+      category: "QuintanaRoo",
+      price: "Ubicado en el estado de Quintana Roo",
+      image: "../img/destinations/cozumel.png",
+    },
+    {
+      //28
+      productName: "Playa del Carmen",
+      category: "QuintanaRoo",
+      price: "Ubicado en el estado de Quintana Roo",
+      image: "../img/destinations/playaDelCarmen.png",
+    },
+    {
+      //29
+      productName: "Riviera Maya",
+      category: "QuintanaRoo",
+      price: "Ubicado en el estado de Quintana Roo",
+      image: "../img/destinations/rivieraMaya.png",
+    },
+    {
+      //30
+      productName: "Parque Xcaret",
+      category: "QuintanaRoo",
+      price: "Ubicado en el estado de Quintana Roo",
+      image: "../img/destinations/xcaret.png",
+    },
+    {
+      //31
+      productName: "Santuario de la Mariposa Monarca",
+      category: "Michuacan",
+      price: "Ubicado en el estado de Michuacán",
+      image: "../img/destinations/mariposaMonarca.png",
+    },
+    {
+      //32
+      productName: "Islas Marietas",
+      category: "Nayarit",
+      price: "Ubicado en el estado de Nayarit",
+      image: "../img/destinations/islasMarietas.png",
+    },
+    {
+      //33
+      productName: "Riviera Nayarita",
+      category: "Nayarit",
+      price: "Ubicado en el estado de Nayarit",
+      image: "../img/destinations/rivieraNayarita.png",
+    },
+    {
+      //34
+      productName: "Sayulita",
+      category: "Nayarit",
+      price: "Ubicado en el estado de Nayarit",
+      image: "../img/destinations/sayulita.png",
+    },
+    {
+      //35
+      productName: "La Ciudad de Querétaro",
+      category: "Queretaro",
+      price: "Ubicado en el estado de Querétaro",
+      image: "../img/destinations/ciudadQueretaro.png",
+    },
+
   ],
 };
 
@@ -277,56 +355,89 @@ document.getElementById("6").addEventListener("click", () => {
   window.location.href = "./destinations/jalisco/careyes.html";
 });
 document.getElementById("7").addEventListener("click", () => {
-  window.location.href = "./destinations/oaxaca/monteAlban.html";
+  window.location.href = "./destinations/jalisco/catedralGuadalajara.html";
 });
 document.getElementById("8").addEventListener("click", () => {
-  window.location.href = "./destinations/oaxaca/hierveElAgua.html";
+  window.location.href = "./destinations/oaxaca/monteAlban.html";
 });
 document.getElementById("9").addEventListener("click", () => {
-  window.location.href = "./destinations/oaxaca/mitla.html";
+  window.location.href = "./destinations/oaxaca/hierveElAgua.html";
 });
 document.getElementById("10").addEventListener("click", () => {
-  window.location.href = "./destinations/oaxaca/huatulco.html";
+  window.location.href = "./destinations/oaxaca/mitla.html";
 });
 document.getElementById("11").addEventListener("click", () => {
-  window.location.href = "./destinations/oaxaca/oaxacaCentro.html";
+  window.location.href = "./destinations/oaxaca/huatulco.html";
 });
 document.getElementById("12").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/aguaAzul.html";
+  window.location.href = "./destinations/oaxaca/oaxacaCentro.html";
 });
 document.getElementById("13").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/canonDelSumidero.html";
+  window.location.href = "./destinations/chiapas/aguaAzul.html";
 });
 document.getElementById("14").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/elArcotete.html";
+  window.location.href = "./destinations/chiapas/canonDelSumidero.html";
 });
 document.getElementById("15").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/lagunasMontebello.html";
+  window.location.href = "./destinations/chiapas/elArcotete.html";
 });
 document.getElementById("16").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/cascadasElChiflon.html";
+  window.location.href = "./destinations/chiapas/lagunasMontebello.html";
 });
 document.getElementById("17").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/montesAzules.html";
+  window.location.href = "./destinations/chiapas/cascadasElChiflon.html";
 });
 document.getElementById("18").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/sanCristobalCasas.html";
+  window.location.href = "./destinations/chiapas/montesAzules.html";
 });
 document.getElementById("19").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/comitanDominguez.html";
+  window.location.href = "./destinations/chiapas/sanCristobalCasas.html";
 });
 document.getElementById("20").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/chiapaDeCorzo.html";
+  window.location.href = "./destinations/chiapas/comitanDominguez.html";
 });
 document.getElementById("21").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/palenque.html";
+  window.location.href = "./destinations/chiapas/chiapaDeCorzo.html";
 });
 document.getElementById("22").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/yaxchilan.html";
+  window.location.href = "./destinations/chiapas/palenque.html";
 });
 document.getElementById("23").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/bonampak.html";
+  window.location.href = "./destinations/chiapas/yaxchilan.html";
 });
 document.getElementById("24").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/bonampak.html";
+});
+document.getElementById("25").addEventListener("click", () => {
   window.location.href = "./destinations/chiapas/tenamPuente.html";
+});
+document.getElementById("26").addEventListener("click", () => {
+  window.location.href = "./destinations/quintanaRoo/bacalar.html";
+});
+document.getElementById("27").addEventListener("click", () => {
+  window.location.href = "./destinations/quintanaRoo/cozumel.html";
+});
+document.getElementById("28").addEventListener("click", () => {
+  window.location.href = "./destinations/quintanaRoo/playaDelCarmen.html";
+});
+document.getElementById("29").addEventListener("click", () => {
+  window.location.href = "./destinations/quintanaRoo/rivieraMaya.html";
+});
+document.getElementById("30").addEventListener("click", () => {
+  window.location.href = "./destinations/quintanaRoo/xcaret.html";
+});
+document.getElementById("31").addEventListener("click", () => {
+  window.location.href = "./destinations/michuacan/mariposasMonarcas.html";
+});
+document.getElementById("32").addEventListener("click", () => {
+  window.location.href = "./destinations/nayarit/islasMarietas.html";
+});
+document.getElementById("33").addEventListener("click", () => {
+  window.location.href = "./destinations/nayarit/rivieraNayarita.html";
+});
+document.getElementById("34").addEventListener("click", () => {
+  window.location.href = "./destinations/nayarit/sayulita.html";
+});
+document.getElementById("35").addEventListener("click", () => {
+  window.location.href = "./destinations/queretaro/ciudadQueretaro.html";
 });
