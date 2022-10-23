@@ -213,8 +213,8 @@ let products = {
     {
       //31
       productName: "Santuario de la Mariposa Monarca",
-      category: "Michuacan",
-      price: "Ubicado en el estado de Michuacán",
+      category: "Michoacan",
+      price: "Ubicado en el estado de Michoacán",
       image: "../img/destinations/mariposaMonarca.png",
     },
     {
@@ -427,7 +427,7 @@ document.getElementById("30").addEventListener("click", () => {
   window.location.href = "./destinations/quintanaRoo/xcaret.html";
 });
 document.getElementById("31").addEventListener("click", () => {
-  window.location.href = "./destinations/michuacan/mariposasMonarcas.html";
+  window.location.href = "./destinations/michoacan/mariposasMonarcas.html";
 });
 document.getElementById("32").addEventListener("click", () => {
   window.location.href = "./destinations/nayarit/islasMarietas.html";

@@ -33,7 +33,10 @@
           <article>
             <img id="back" class="miniImg" src="/img/back.png" />
             <article class="title">SANTUARIO DE LA MARIPOSA MONARCA</article>
-            <img class="imgDestination" src="/img/destinations/mariposaMonarca.png" />
+            <img
+              class="imgDestination"
+              src="/img/destinations/mariposaMonarca.png"
+            />
           </article>
         </article>
       </header>
@@ -44,13 +47,18 @@
         <article class="subtitle">Descripci&oacute;n</article>
 
         <p class="longText">
-            La mariposa Monarca, la bella especie de característicos colores naranja y negro, ha 
-            sobrevivido en América del Norte gracias a un largo viaje de reposo que tiene a México 
-            como punto de llegada.Es el insecto que realiza el movimiento migratorio más largo, 
-            viajando 4.000 kilómetros para escapar del crudo invierno canadiense.En Michoacán tiene 
-            dos grandes santuarios, la montaña de El Rosario y Sierra Chincua. Los observadores de 
-            la vida silvestre se las arreglan para ver a estos curiosos insectos que se hospedan en 
-            México entre noviembre y marzo.
+          La mariposa Monarca, la bella especie de característicos colores
+          naranja y negro, ha sobrevivido en América del Norte gracias a un
+          largo viaje de reposo que tiene a México como punto de llegada.
+        </p>
+
+        <p class="longText">
+          Es el insecto que realiza el movimiento migratorio más largo, viajando
+          4.000 kilómetros para escapar del crudo invierno canadiense.En
+          Michoacán tiene dos grandes santuarios, la montaña de El Rosario y
+          Sierra Chincua. Los observadores de la vida silvestre se las arreglan
+          para ver a estos curiosos insectos que se hospedan en México entre
+          noviembre y marzo.
         </p>
 
         <article class="subtitle">Calificar destino</article>
@@ -170,7 +178,7 @@
           });
         });
 
-      if (localStorage.votoMariposasMonarcas== undefined) {
+      if (localStorage.votoMariposasMonarcas == undefined) {
         result.innerHTML = "";
       } else {
         result.innerHTML += localStorage.votoMariposasMonarcas;

@@ -33,7 +33,10 @@
           <article>
             <img id="back" class="miniImg" src="/img/back.png" />
             <article class="title">GUADALAJARA (CENTRO)</article>
-            <img class="imgDestination" src="/img/destinations/guadalajaraCentro.png" />
+            <img
+              class="imgDestination"
+              src="/img/destinations/guadalajaraCentro.png"
+            />
           </article>
         </article>
       </header>
@@ -44,13 +47,16 @@
         <article class="subtitle">Descripci&oacute;n</article>
 
         <p class="longText">
-          La capital del estado de Jalisco es la segunda ciudad más poblada del país y 
-          no le va atrás a Ciudad de México en lugares de interés.Entre estos destacan su 
-          soberbia catedral, el Museo de la ciudad, el de Paleontología, el Regional, el 
-          de Cerámica y el pintoresco Museo De Arte Huichol Wixárika. Guadalajara es una 
-          ciudad con mucho movimiento cultural.
+          La capital del estado de Jalisco es la segunda ciudad más poblada del
+          país y no le va atrás a Ciudad de México en lugares de interés.
         </p>
-        
+        <p class="longText">
+          Entre estos destacan su soberbia catedral, el Museo de la ciudad, el
+          de Paleontología, el Regional, el de Cerámica y el pintoresco Museo De
+          Arte Huichol Wixárika. Guadalajara es una ciudad con mucho movimiento
+          cultural.
+        </p>
+
         <!--
         <p class="longText">
           Falta.
@@ -173,7 +179,7 @@
           });
         });
 
-      if (localStorage.votoGuadalajaraCentro== undefined) {
+      if (localStorage.votoGuadalajaraCentro == undefined) {
         result.innerHTML = "";
       } else {
         result.innerHTML += localStorage.votoGuadalajaraCentro;
