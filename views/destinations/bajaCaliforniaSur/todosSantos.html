@@ -32,8 +32,11 @@
         <article>
           <article>
             <img id="back" class="miniImg" src="/img/back.png" />
-            <article class="title">TODOS LOS SANTOS</article>
-            <img class="imgDestination" src="/img/destinations/todosSantos.png" />
+            <article class="title">TODOS SANTOS</article>
+            <img
+              class="imgDestination"
+              src="/img/destinations/todosSantos.png"
+            />
           </article>
         </article>
       </header>
@@ -44,13 +47,18 @@
         <article class="subtitle">Descripci&oacute;n</article>
 
         <p class="longText">
-            Otro Pueblo Mágico mexicano, en el estado de Baja California Sur. 
-            Por su apacible clima es comparado con Cuernavaca y sus verdes campos están repletos 
-            de árboles frutales, especialmente mangos, paltas y papayas.Está situado en el extremo sur 
-            de la península de Baja California, como custodiando el Pacífico sin descuidar la entrada 
-            al estrecho Golfo de California o Mar de Cortés.Sus playas frente al océano son ideales para 
-            la práctica del surf. Es el lugar de descanso preferido por la gente ligada al mundo del 
-            arte, por su clima, sus espacios limpios, amplios y abiertos, y su vocación cultural.
+          Otro Pueblo Mágico mexicano, en el estado de Baja California Sur. Por
+          su apacible clima es comparado con Cuernavaca y sus verdes campos
+          están repletos de árboles frutales, especialmente mangos, paltas y
+          papayas.
+        </p>
+        <p class="longText">
+          Está situado en el extremo sur de la península de Baja California,
+          como custodiando el Pacífico sin descuidar la entrada al estrecho
+          Golfo de California o Mar de Cortés.Sus playas frente al océano son
+          ideales para la práctica del surf. Es el lugar de descanso preferido
+          por la gente ligada al mundo del arte, por su clima, sus espacios
+          limpios, amplios y abiertos, y su vocación cultural.
         </p>
 
         <article class="subtitle">Calificar destino</article>
@@ -170,7 +178,7 @@
           });
         });
 
-      if (localStorage.votoTodosSantos== undefined) {
+      if (localStorage.votoTodosSantos == undefined) {
         result.innerHTML = "";
       } else {
         result.innerHTML += localStorage.votoTodosSantos;

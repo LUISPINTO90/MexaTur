@@ -12,9 +12,9 @@ let products = {
       productName: "Todos Santos",
       category: "BajaCaliforniaSur",
       price: "Ubicado en el estado de Baja California Sur",
-      image: "../img/destinations/canonDelSumidero.png",
+      image: "../img/destinations/todosSantos.png",
     },
-    
+
     {
       //3
       productName: "Cascadas de Agua Azul",
@@ -186,14 +186,14 @@ let products = {
     {
       //27
       productName: "Pirámides de Teotihuacán",
-      category: "EstadoMexico",
+      category: "EstadoDeMexico",
       price: "Ubicado en el estado de México",
       image: "../img/destinations/teotihuacan.png",
     },
     {
       //28
       productName: "Toluca",
-      category: "EstadoMexico",
+      category: "EstadoDeMexico",
       price: "Ubicado en el estado de México",
       image: "../img/destinations/toluca.png",
     },
@@ -364,7 +364,7 @@ let products = {
       category: "Queretaro",
       price: "Ubicado en el estado de Querétaro",
       image: "../img/destinations/ciudadQueretaro.png",
-    },  
+    },
     {
       //53
       productName: "Bacalar",
@@ -434,7 +434,7 @@ let products = {
       category: "Yucatan",
       price: "Ubicado en el estado de Yucatán",
       image: "../img/destinations/chichenItza.png",
-    },  
+    },
     {
       //63
       productName: "Las zonas arqueológicas en Mérida",
@@ -442,7 +442,6 @@ let products = {
       price: "Ubicado en el estado de Yucatán",
       image: "../img/destinations/zonasMerida.png",
     },
-    
   ],
 };
 
@@ -543,40 +542,40 @@ document.getElementById("3").addEventListener("click", () => {
   window.location.href = "./destinations/chiapas/aguaAzul.html";
 });
 document.getElementById("4").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/bonampak.html";
-});
-document.getElementById("5").addEventListener("click", () => {
   window.location.href = "./destinations/chiapas/canonDelSumidero.html";
 });
-document.getElementById("6").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/cascadasElChiflon.html";
-});
-document.getElementById("7").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/chiapaDeCorzo.html";
-});
-document.getElementById("8").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/comitanDominguez.html";
-});
-document.getElementById("9").addEventListener("click", () => {
+document.getElementById("5").addEventListener("click", () => {
   window.location.href = "./destinations/chiapas/elArcotete.html";
 });
-document.getElementById("10").addEventListener("click", () => {
+document.getElementById("6").addEventListener("click", () => {
   window.location.href = "./destinations/chiapas/lagunasMontebello.html";
 });
-document.getElementById("11").addEventListener("click", () => {
+document.getElementById("7").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/cascadasElChiflon.html";
+});
+document.getElementById("8").addEventListener("click", () => {
   window.location.href = "./destinations/chiapas/montesAzules.html";
+});
+document.getElementById("9").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/sanCristobalCasas.html";
+});
+document.getElementById("10").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/comitanDominguez.html";
+});
+document.getElementById("11").addEventListener("click", () => {
+  window.location.href = "./destinations/chiapas/chiapaDeCorzo.html";
 });
 document.getElementById("12").addEventListener("click", () => {
   window.location.href = "./destinations/chiapas/palenque.html";
 });
 document.getElementById("13").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/sanCristobalCasas.html";
+  window.location.href = "./destinations/chiapas/yaxchilan.html";
 });
 document.getElementById("14").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/tenamPuente.html";
+  window.location.href = "./destinations/chiapas/bonampak.html";
 });
 document.getElementById("15").addEventListener("click", () => {
-  window.location.href = "./destinations/chiapas/yaxchilan.html";
+  window.location.href = "./destinations/chiapas/tenamPuente.html";
 });
 document.getElementById("16").addEventListener("click", () => {
   window.location.href = "./destinations/chihuahua/chJuarez.html";
@@ -588,13 +587,15 @@ document.getElementById("18").addEventListener("click", () => {
   window.location.href = "./destinations/ciudadDeMexico/bosqueChapultepec.html";
 });
 document.getElementById("19").addEventListener("click", () => {
-  window.location.href = "./destinations/ciudadDeMexico/catedralDeGuadalupe.html";
+  window.location.href =
+    "./destinations/ciudadDeMexico/catedralDeGuadalupe.html";
 });
 document.getElementById("20").addEventListener("click", () => {
-  window.location.href = "./destinations/ciudadDeMexico/museoFridaKahlos.html";
+  window.location.href = "./destinations/ciudadDeMexico/museoFridaKahlo.html";
 });
 document.getElementById("21").addEventListener("click", () => {
-  window.location.href = "./destinations/ciudadDeMexico/museoNacionalAntropologia.html";
+  window.location.href =
+    "./destinations/ciudadDeMexico/museoNacionalAntropologia.html";
 });
 document.getElementById("22").addEventListener("click", () => {
   window.location.href = "./destinations/ciudadDeMexico/palacioNacional.html";
@@ -621,26 +622,26 @@ document.getElementById("29").addEventListener("click", () => {
   window.location.href = "./destinations/guanajuato/granaditas.html";
 });
 document.getElementById("30").addEventListener("click", () => {
-  window.location.href = "./destinations/guanajuato/moniasCelaya.html";
+  window.location.href = "./destinations/guanajuato/momiasCelaya.html";
 });
 document.getElementById("31").addEventListener("click", () => {
   window.location.href = "./destinations/guanajuato/monumentosLeon.html";
 });
 document.getElementById("32").addEventListener("click", () => {
   window.location.href = "./destinations/guerrero/acapulco.html";
-}); 
+});
 document.getElementById("33").addEventListener("click", () => {
   window.location.href = "./destinations/guerrero/ixtapa.html";
-}); 
+});
 document.getElementById("34").addEventListener("click", () => {
   window.location.href = "./destinations/guerrero/taxco.html";
-}); 
+});
 document.getElementById("35").addEventListener("click", () => {
   window.location.href = "./destinations/guerrero/zihuatanejo.html";
-}); 
+});
 document.getElementById("36").addEventListener("click", () => {
   window.location.href = "./destinations/hidalgo/tula.html";
-}); 
+});
 document.getElementById("37").addEventListener("click", () => {
   window.location.href = "./destinations/jalisco/careyes.html";
 });

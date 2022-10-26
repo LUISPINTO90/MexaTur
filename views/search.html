@@ -66,18 +66,18 @@
                 Todos
               </button>
 
-              <button 
+              <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('BajaCalifornia')"
               >
-                Baja California
+                BajaCalifornia
               </button>
 
-              <button 
+              <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('BajaCaliforniaSur')"
               >
-                Baja California Sur
+                BajaCaliforniaSur
               </button>
 
               <button
@@ -98,7 +98,7 @@
                 class="button-value buttonsFilter"
                 onclick="filterProduct('CiudadDeMexico')"
               >
-                Ciudad de México
+                CiudadDeMexico
               </button>
 
               <button
@@ -110,9 +110,9 @@
 
               <button
                 class="button-value buttonsFilter"
-                onclick="filterProduct('EstadoMexico')"
+                onclick="filterProduct('EstadoDeMexico')"
               >
-                Estado de México
+                EstadoDeMexico
               </button>
 
               <button
@@ -122,7 +122,6 @@
                 Guanajuato
               </button>
 
-              
               <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('Guerrero')"
@@ -136,7 +135,7 @@
               >
                 Hidalgo
               </button>
-              
+
               <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('Jalisco')"
@@ -151,12 +150,12 @@
                 Michoacan
               </button>
 
-              <button 
+              <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('Nayarit')"
               >
                 Nayarit
-              </button>     
+              </button>
 
               <button
                 class="button-value buttonsFilter"
@@ -172,25 +171,25 @@
                 Puebla
               </button>
 
-              <button 
+              <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('Queretaro')"
               >
-                Querétaro
+                Queretaro
               </button>
 
-              <button 
+              <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('QuintanaRoo')"
               >
-                Quintana Roo
+                QuintanaRoo
               </button>
 
               <button
                 class="button-value buttonsFilter"
                 onclick="filterProduct('SanLuisPotosi')"
               >
-                San Luis Potosí
+                SanLuisPotosi
               </button>
 
               <button
@@ -211,9 +210,10 @@
                 class="button-value buttonsFilter"
                 onclick="filterProduct('Yucatan')"
               >
-                Yucatán
+                Yucatan
               </button>
             </section>
+            <div id="errorMessage"></div>
             <section id="products"></section>
           </article>
         </section>
@@ -226,6 +226,12 @@
     <script>
       document.getElementById("back").addEventListener("click", () => {
         window.location.href = "./profile.html";
+      });
+    </script>
+
+    <script>
+      document.getElementById("search").addEventListener("click", () => {
+        alert("Busqueda erronea");
       });
     </script>
   </body>
