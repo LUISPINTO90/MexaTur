@@ -98,7 +98,9 @@ document.getElementById("btnLogin").addEventListener("click", () => {
       ) {
         window.location.href = "./views/profile.html";
 
+        localStorage.usuarioN = data.userName;
         localStorage.usuario = userEmail;
+        
       } else {
         Swal.showValidationMessage(`Contraseña incorrecta`);
       }

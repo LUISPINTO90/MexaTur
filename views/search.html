@@ -20,13 +20,17 @@
     <!-- SweetAlert2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-
+  <header class="botonera">
+      <img id="back" class="back" src="../img/back.png" />
+      <img class="miniLogo" src="../img/mainLogo5.png" />
+      <!--<img class="miniBucar" src="../img/busqueda.png" />-->    
+  </header>
   <body>
+    
     <section>
       <header class="headerProfile">
         <article>
           <article>
-            <img id="back" class="miniImg" src="../img/back.png" />
             <article class="title">B&uacute;squeda</article>
           </article>
         </article>
@@ -57,7 +61,7 @@
             </article>
           </article>
 
-          <article>
+          <article class="filtros">
             <section id="buttons">
               <button
                 class="button-value buttonsFilter"
@@ -231,7 +235,7 @@
 
     <script>
       document.getElementById("search").addEventListener("click", () => {
-        alert("Busqueda erronea");
+        alert("No hay resultados para esta busquedad");
       });
     </script>
   </body>

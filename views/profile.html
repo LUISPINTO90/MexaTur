@@ -20,48 +20,40 @@
     <!-- SweetAlert2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-
+  <header class="botonera">
+      <img class="miniLogo" src="../img/mainLogo5.png" />
+      <!--<img class="miniBucar" src="../img/busqueda.png" />-->
+      <img id="back" class="miniImg" src="../img/cerrar-sesion.png" />
+  </header>
   <body>
     <section>
-      <header class="headerProfile">
-        <article>
-          <article>
-            <img id="back" class="miniImg" src="../img/backRed.png" />
-          </article>
-          <article>
-            <img class="secondaryLogoImg" src="../img/mainLogo3.png" />
-          </article>
-        </article>
-
-        <article>
-          <img class="userImg" src="../img/user.png" />
-          <article id="userNameProfile" class="subtitle"></article>
-          <article>
-            <input
-              class="swal2-confirm swalBtnColor swal2-styled"
-              type="button"
-              id="btnSearch"
-              value="Buscar Destinos"
-            />
-          </article>
-          <br />
-        </article>
-      </header>
+      <article>
+        <img class="userImg" src="../img/perfil.png" />
+        <article id="userNameProfile" class="userData"></article>
+        <br />
+      </article>
+      <article>
+        <input
+          class="btnSearch"
+          type="button"
+          id="btnSearch"
+          value="Buscar Destinos"
+        />
+      </article>
     </section>
-
-    <section>
-      <main>
-        <article>
-          <article class="title">Destinos Guardados</article>
-        </article>
-        <div id="savedDestinations" class="resultSave">
-          
-        </div>
-      </main>
+ <!---->
+    <section class="wrapper">
+      <article>
+        <article class="DGuardados">Destinos Guardados</article>
+      </article>
+      <article>
+        <section id="products"></section>
+      </article>
     </section>
-
+    
+    
     <!-- Scripts -->
-
+   <script src="../public/Destinations.js"></script>
     <script>
       document.getElementById("back").addEventListener("click", () => {
         window.location.href = "../index.html";
@@ -74,6 +66,7 @@
 
     <script>
       document.getElementById("userNameProfile").innerHTML = `
+      Nombre: ${localStorage.usuarioN} <br />
       Correo: ${localStorage.usuario} <br />
       `;
     </script>

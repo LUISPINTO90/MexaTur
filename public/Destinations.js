@@ -477,6 +477,7 @@ for (let i of products.data) {
   card.appendChild(container);
   document.getElementById("products").appendChild(card);
 }
+
 //parameter passed from button (Parameter same as category)
 function filterProduct(value) {
   //Button class code
@@ -508,6 +509,7 @@ function filterProduct(value) {
     }
   });
 }
+
 //Search button click
 document.getElementById("search").addEventListener("click", () => {
   //initializations
@@ -520,7 +522,7 @@ document.getElementById("search").addEventListener("click", () => {
     if (element.innerText.includes(searchInput.toUpperCase())) {
       //display matching card
       cards[index].classList.remove("hide");
-    } else {
+    }else{
       //hide others
       cards[index].classList.add("hide");
     }
@@ -723,3 +725,5 @@ document.getElementById("62").addEventListener("click", () => {
 document.getElementById("63").addEventListener("click", () => {
   window.location.href = "./destinations/yucatan/zonasMerida.html";
 });
+
+
